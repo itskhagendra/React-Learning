@@ -1,0 +1,25 @@
+.container{
+    align-items: center;
+    height: 50px;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid grey;
+    margin: 2%;
+
+}
+.container:hover
+{
+    background-color: grey;
+    color: white;
+}
+.list{
+    border: 3px;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid grey;
+}

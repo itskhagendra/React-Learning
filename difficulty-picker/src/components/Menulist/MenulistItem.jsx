@@ -6,10 +6,14 @@ function MenulistItem(props) {
     //     <li>{`set to ${value}`}</li>
     //     console.log(value);
     // })
+
+    const onItemClick=()=>{
+      props.onClick(props.difficulty)
+    }
   return (
     <>
-    <div className={style.container}>
-        <p>{`set Difficulty to ${props.difficulty}`}</p>
+    <div className={`${style.container} ${props.isSelected?style.selected:""}`} onClick={onItemClick} >
+        <p>{`set Difficulty to ${props.difficulty} `}</p>
     </div>
     </>
   )

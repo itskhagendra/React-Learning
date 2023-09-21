@@ -1,16 +1,18 @@
 import React from 'react'
 import MenulistItem from './MenulistItem';
 import style from "./style.module.css";
-function MenuList() {
-    const list = ["Low","Medium","High","Insane"];
-  return (
-    <div className={style.list}>
-        <MenulistItem difficulty={list[0]}/>
-        <MenulistItem difficulty={list[1]}/>
-        <MenulistItem difficulty={list[2]}/>
-        <MenulistItem difficulty={list[3]}/>
 
-    </div>
+function MenuList(props) {
+    const list = ["Low","Medium","High","Insane"];
+    const difflist=[];
+    for(const diff of list)
+    {
+      difflist.push(
+        <MenulistItem difficulty={diff} onClick={props.onItemClick} isSelected={diff===props.difficulty}/>
+      )
+    }
+  return (
+    <div className={style.list}>{difflist}</div>
   )
 }
 

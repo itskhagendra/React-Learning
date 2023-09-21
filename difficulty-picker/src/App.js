@@ -1,9 +1,10 @@
 import './App.css';
+import DisplayDifficulty from './components/DisplayDifficulty/DisplayDifficulty';
 
 function App() {
   return (
     <div className="App">
-      <p>Yeyyy</p>
+      <DisplayDifficulty difficulty="low"/>
     </div>
   );
 }
